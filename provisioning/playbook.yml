@@ -1,0 +1,11 @@
+---
+- name: Configuration for Production
+  hosts: all
+  become: yes
+  vars_files:
+    - vars/main.yml
+  roles:
+    - server
+    - app
+    - { role: gunicorn, autostart: true, enabled: true }
+    - { role: nginx, use_ssl: false, enabled: true }

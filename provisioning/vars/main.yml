@@ -1,0 +1,12 @@
+---
+server:
+    install: '1'
+    packages: [build-essential, git, htop, vim, unzip, curl]
+    timezone: UTC
+    locale: en_US.UTF-8
+app:
+    venv_path: '/webapps/devops'
+    requirement_path: '/webapps/devops/requirements.txt'
+    user_name: vagrant 
+    group_name: www-data
+    project_name: web01
